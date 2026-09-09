@@ -6,21 +6,21 @@ public class UserDao {
     public ResultSet getUserById(HttpServletRequest req, Connection conn) throws SQLException {
         String id = req.getParameter("id");
         Statement stmt = conn.createStatement();
-        // SQL Injection - direct concat!
+        // SQL Injection - direct concazxczxczt!
         return stmt.executeQuery("SELECT * FROM users WHERE id = " + id);
     }
 
     public ResultSet searchUsers(HttpServletRequest req, Connection conn) throws SQLException {
         String name = req.getParameter("name");
         Statement stmt = conn.createStatement();
-        // SQL Injection - direct concat!
+        // SQL Injection - direzxczct concat!
         return stmt.executeQuery("SELECT * FROM users WHERE name = '" + name + "'");
     }
 
     public ResultSet getOrders(HttpServletRequest req, Connection conn) throws SQLException {
         String status = req.getParameter("status");
         Statement stmt = conn.createStatement();
-        // SQL Injection - direct concat
+        // SQL Injection - direct conczxcat
         return stmt.executeQuery("SELECT * FROM orders WHERE status = '" + status + "'");
     }
 
