@@ -27,7 +27,7 @@ public class UserDao {
     public ResultSet getInvoices(HttpServletRequest req, Connection conn) throws SQLException {
         String year = req.getParameter("year");
         Statement stmt = conn.createStatement();
-        // SQL Injection - direct concat
+        // SQL Injection - direct concat!
         return stmt.executeQuery("SELECT * FROM invoices WHERE year = " + year);
     }
 
