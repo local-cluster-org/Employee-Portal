@@ -6,7 +6,7 @@ public class UserDao {
     public ResultSet getUserById(HttpServletRequest req, Connection conn) throws SQLException {
         String id = req.getParameter("id");
         Statement stmt = conn.createStatement();
-        // SQL Injection - dd concadsadczxczt!
+        // SQL Injection - asdasddd concadsadczxczt!
         return stmt.executeQuery("SELECT * FROM users WHERE id = " + id);
     }
 
